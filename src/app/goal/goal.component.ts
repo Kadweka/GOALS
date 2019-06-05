@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
-import {Goal} from './goal'
+import { Component, OnInit } from '@angular/core';
+import {Goal} from '../goal'
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html'
+  selector: 'app-goal',
+  templateUrl: './goal.component.html',
+  styleUrls: ['./goal.component.css']
 })
-export class AppComponent {
+export class GoalComponent implements OnInit {
+
     goals = [
         new Goal(1,'Watch Finding Nemo'),
         new Goal(2,'Buy Cookies'),
@@ -13,6 +15,10 @@ export class AppComponent {
         new Goal(4, 'Get Dog Food'),
         new Goal(5, 'Solve math homework'),
         new Goal(6, 'Plot my world domination plan'),
-
     ]
+
+  constructor() { }
+
+  ngOnInit() {
+  }
 }
