@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import {Goal} from '../goal';
 
+
 @Component({
   selector: 'app-goal',
   templateUrl: './goal.component.html',
   styleUrls: ['./goal.component.css']
-})
 
+})
 export class GoalComponent implements OnInit {
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  ngOnInit() {
   }
 
 // tslint:disable-next-line: member-ordering
@@ -22,6 +22,7 @@ new Goal(5, 'Solve math homework', 'Damn Math', new Date(2018, 2, 14) ),
 new Goal(6, 'Plot my world domination plan', 'Cause I am an evil overlord', new Date(2018, 3, 14) ),
 
 ];
+
 toogleDetails( index ) {
   this.goals[index].showDescription = !this.goals[index].showDescription;
    }
